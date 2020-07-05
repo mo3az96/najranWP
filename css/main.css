@@ -90,7 +90,6 @@ body {
   font-family: tajawal;
   font-weight: normal;
   background-color: #8e2528;
-  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -831,14 +830,11 @@ main {
   background-position: center;
   position: absolute;
   bottom: 98%;
-  left: -200%;
-  right: -200%;
+  left: -0%;
+  right: -0%;
   z-index: 9;
   height: 266px;
   content: "";
-  background-repeat-x: repeat;
-  -webkit-animation: slide 50s linear infinite;
-          animation: slide 50s linear infinite;
 }
 
 @media (max-width: 767px) {
@@ -846,6 +842,7 @@ main {
     background-position: 40%;
     height: 200px;
     background-repeat: no-repeat;
+    background-size: 350%;
   }
 }
 
@@ -1401,11 +1398,6 @@ html[lang=ar] .social-link:last-of-type {
   z-index: 9;
   height: 205px;
   content: "";
-  left: -200%;
-  right: -200%;
-  background-repeat-x: repeat;
-  -webkit-animation: slide 50s linear infinite;
-          animation: slide 50s linear infinite;
 }
 
 @media (max-width: 767px) {
