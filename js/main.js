@@ -3,7 +3,11 @@ $(window).on('load', function () {
         $(this).remove();
         $("body").removeClass("overflow");
     });
+
+
 });
+
+
 $(document).ready(function () {
     new WOW().init();
     if ($(window).width() > 991) {
