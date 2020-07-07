@@ -13,9 +13,16 @@ $(document).ready(function () {
     if ($(window).width() > 991) {
         $(".photo-cont").unwrap();
         $(".gallery").removeClass("swiper-container");
+        $(".card-cont").unwrap();
+        $(".cards").removeClass("swiper-container");
     }
     if ($(window).width() <= 991) {
         $(".photo-cont").wrap('<div class="swiper-slide"></div>')
+        $(".mo-card").unwrap();
+        $(".mo-card").wrap('<div class="card-flex"></div>')
+        $(".card-flex").wrap('<div class="swiper-slide"></div>')
+
+
         $("nav").removeAttr("class")
         $("nav").removeAttr("data-wow-delay")
     }
@@ -28,7 +35,28 @@ $(document).ready(function () {
             clickable: true,
         },
         autoplay: {
-            delay: 2500,
+            delay: 4000,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                effect: "fade",
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+        },
+    });
+
+    var cardsswiper = new Swiper('.cards.swiper-container', {
+        spaceBetween: 29,
+        loop: true,
+        pagination: {
+            el: '.cards .swiper-pagination',
+            clickable: true,
         },
         breakpoints: {
             0: {
