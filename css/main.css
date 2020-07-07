@@ -1231,7 +1231,7 @@ html[dir='ltr'] .card-flex {
 }
 
 html[dir='rtl'] .card-flex {
-  height: 350px;
+  height: 370px;
 }
 
 .card-name {
